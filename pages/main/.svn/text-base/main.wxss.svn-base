@@ -1,0 +1,13 @@
+/* pages/main/main.wxss */
+@import "../public/mainItem/mainItem.wxss";
+.baseview{
+  width: 100%;
+  margin: 10rpx;
+}
+.swp{
+  width: 100%;
+  height: 300rpx;
+}
+.img{
+  width: 100%;
+}

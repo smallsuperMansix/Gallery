@@ -1,0 +1,9 @@
+<!--pages/user/advise/advise.wxml-->
+<form bindsubmit="formSubmit">
+  <view class='baseView'>
+    <textarea class="{{isfirst?'textareaf':'textarea'}}" style='' disabled='{{isAct}}' value='{{message}}' bindfocus='clear' name='message'></textarea>
+  </view>
+  <view class="baseView">
+    <button formType="submit" class='button'>提交</button>
+  </view>
+</form>

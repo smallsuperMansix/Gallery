@@ -1,0 +1,71 @@
+/* pages/user/inform/inform.wxss */
+.content-all{
+  width : 100%;
+  text-align: center;
+  height: 100%;
+}
+.input-textarea{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  text-align: left;
+  background-color: white;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid white;
+  min-height: 200px;
+  width: 75%;
+  line-height: 50px;
+  position:relative;
+  font-size: 16px;
+}
+.boxShawd{
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #636363;
+}
+.bottem-info{
+  width: 100%;
+  border-top: 1px solid #e8e8e8;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  line-height: 50px;
+  font-size: 14px;
+  color: #857c7c;
+}
+.create-time{
+  margin-top: 20px;
+  font-size: 10px;
+  width: 120px;
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  background-color : #e8e8e8;
+  border-radius:10px;
+  color: #636363;
+}
+.inform-title{
+  font-family: 华文细黑;
+  font-size: 40rpx;
+}
+.nick{
+  color: rgba(0, 0, 255, 0.514);
+}
+.inform-detail{
+  color: rgba(5, 93, 128, 0.644);
+  font-size: 35rpx;
+}
+.noneview{
+  display: flex;
+  flex-direction: column;
+}
+.nonetext{
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+}
+.textarea{
+  width: 100%;
+  background-color : #c2abab15;
+  color: rgb(167, 110, 25);
+}

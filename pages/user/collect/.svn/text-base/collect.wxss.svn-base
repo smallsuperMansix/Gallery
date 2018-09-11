@@ -1,0 +1,10 @@
+/* 导入模板wxss */
+@import "../../public/collect/collectItem.wxss";
+
+/* pages/user/collect/collect.wxss */
+.baseView{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10rpx;
+}

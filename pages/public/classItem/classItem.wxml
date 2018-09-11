@@ -1,0 +1,16 @@
+<template name="classItem">
+  <!-- List Item begin -->
+  <view class="content-list">
+    <navigator class="item" open-type='navigate' url='' data-url='{{imgurl}}' bindtap='previewImg'>
+      <view class="top">
+        <image class="cover-img" src="{{imgurl}}" mode="aspectFill" />
+      </view>
+    </navigator>
+    <view class="info" data-fname='{{filename}}' bindtap='collect'>
+      <view class="title">
+        <image class="button-img" src="/images/ico/icon-like.png" mode="aspectFit"/>
+      </view>
+    </view>
+  </view>
+  <!-- List Item end -->
+</template>

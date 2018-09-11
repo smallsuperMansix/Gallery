@@ -1,0 +1,16 @@
+<!-- 导入模板wxml -->
+<import src="../../public/log/log.wxml" />
+
+<!--pages/user/about/about.wxml-->
+<view class='base'>
+  <image src='ytb.png' class='img'></image>
+  <text class='text'>V1.0</text>
+</view>
+<view class='foot'>
+  <image class='rol'></image>
+  <text class='log'>更新日志</text>
+  <block wx:for="{{logList}}" wx:for-item="at" wx:key="id">
+    <!-- 使用模板，传入当前循环对象item -->
+    <template is="log" data="{{...at}}" />
+  </block>
+</view>

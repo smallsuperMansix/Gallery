@@ -1,0 +1,20 @@
+<!-- 导入模板 -->
+<import src="../../public/pagestate/pagestate.wxml" />
+<template is="pagestate" data="{{...pageing}}" />
+<!--pages/user/inform/inform.wxml-->
+<view wx:if="{{isnone}}" class='noneview'>
+  <text class='nonetext'>没有更多内容了</text>
+</view>
+<view class="content-all">
+  <block wx:for="{{informs}}" wx:for-item="ifdt" wx:key="id">
+    <view class='create-time'>{{ifdt.createtime}}</view>
+    <view class='input-textarea boxShawd' auto-focus="true" adjust-position="false">
+      <view class='inform-title'>Dear <text class='nick'>{{userInfo.nickName}}</text>：</view>
+      <view class='inform-detail'>{{ifdt.informtext}}</view>
+      <view wx:if="{{isAuth=='Y'}}"><form bindsubmit="formSubmit" data-informid='{{ifdt.informid}}'><textarea name='answer' class='textarea' value='{{answerMsg}}'></textarea><button formType="submit" class='button'>提交</button></form></view>
+      <block wx:if="{{ifdt.url}}">
+        <view class='bottem-info' bindtap='viewDetails' data-filename='{{ifdt.url}}'>查看详情</view>
+      </block>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,61 @@
+<!--pages/home/home.wxml-->
+<import src="../public/mainItem/mainItem.wxml" />
+<swiper autoplay='true' interval='1500' duration='300' class='swp' indicator-dots='true'>
+  <block wx:for="{{recList}}" wx:for-item="at" wx:key="id">
+    <swiper-item>
+      <image src='{{imgUrl+at.filename}}' class='img' mode='scaleToFill' data-url='{{imgUrl+at.filename}}' bindtap='previewImg'/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='sortview'>
+  <mainsort size='50' type='qb' data-id='1' istouch='classification/classification?id=1'>全部
+  </mainsort>
+  <mainsort size='50' type='fj' data-id='2' istouch='classification/classification?id=2'>风景
+  </mainsort>
+  <mainsort size='50' type='rw' data-id='3' istouch='classification/classification?id=3'>人物
+  </mainsort>
+  <mainsort size='50' type='gx' data-id='4' istouch='classification/classification?id=4'>搞笑
+  </mainsort>
+  <mainsort size='50' type='qt' data-id='5' istouch='classification/classification?id=5'>其他
+  </mainsort>
+</view>
+<navigator class="row-container" open-type='navigate' url='' data-urls='{{hotList}}' bindtap='previewImg'>
+  <view class="header">
+    <view class="left">
+      <view class=""></view>
+      <text>热门</text>
+    </view>
+    <view class="right">
+      <text>查看更多</text>
+      <view class=""></view>
+    </view>
+  </view>
+  <view class="content-wrapper">
+    <block wx:for="{{hotList}}" wx:for-item="at" wx:key="id">
+      <!-- 使用模板，传入当前循环对象item -->
+      <block wx:if='{{index < 2}}'>
+        <template is="mainItem" data="{{...at,...{itemurl: imgUrl+at.filename} }}" />
+      </block>
+    </block>
+  </view>
+</navigator>
+<navigator class="row-container" open-type='navigate' url='' data-urls='{{upList}}' bindtap='previewImg'>
+  <view class="header">
+    <view class="left">
+      <view class=""></view>
+      <text>最新上传</text>
+    </view>
+    <view class="right">
+      <text>查看更多</text>
+      <view class=""></view>
+    </view>
+  </view>
+  <view class="content-wrapper">
+    <block wx:for="{{upList}}" wx:for-item="at" wx:key="id">
+      <!-- 使用模板，传入当前循环对象item -->
+      <block wx:if='{{index < 2}}'>
+        <template is="mainItem" data="{{...at,...{itemurl: imgUrl+at.filename} }}" />
+      </block>
+    </block>
+  </view>
+</navigator>

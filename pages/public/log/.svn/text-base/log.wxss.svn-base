@@ -1,0 +1,28 @@
+.content-list {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}
+
+.content-list .item {
+  display: block;
+  margin: 10rpx;
+  width: 100%;
+}
+
+.content-list .item .li{
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 50%;
+  background-color: rgb(134, 131, 131);
+  margin-left: 20rpx;
+}
+
+.content-list .item .info {
+  font-size: 30rpx;
+  color: rgb(185, 177, 177);
+  margin-left: 10rpx;
+}

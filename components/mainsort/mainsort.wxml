@@ -1,0 +1,1 @@
+<navigator class="i-class" style="width: {{size}}rpx;" open-type='navigate' url='{{istouch}}'><image src="/components/mainsort/ico/{{type}}.png" style="width: {{size}}rpx; height: {{size}}rpx;"/><slot></slot></navigator>

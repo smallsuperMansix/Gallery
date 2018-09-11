@@ -1,0 +1,31 @@
+<!--pages/home/classification/classification.wxml-->
+<import src="../../public/classItem/classItem.wxml" />
+<view class='sortview'>
+  <classes color="{{choose=='1'?'red':'black'}}" ischoose="{{choose=='1'?'Y':'N'}}" bindtap='chooseHandle' data-id='1'>全部</classes>
+  <classes color="{{choose=='2'?'red':'black'}}" ischoose="{{choose=='2'?'Y':'N'}}" bindtap='chooseHandle' data-id='2'>风景</classes>
+  <classes color="{{choose=='3'?'red':'black'}}" ischoose="{{choose=='3'?'Y':'N'}}" bindtap='chooseHandle' data-id='3'>人物</classes>
+  <classes color="{{choose=='4'?'red':'black'}}" ischoose="{{choose=='4'?'Y':'N'}}" bindtap='chooseHandle' data-id='4'>搞笑</classes>
+  <classes color="{{choose=='5'?'red':'black'}}" ischoose="{{choose=='5'?'Y':'N'}}" bindtap='chooseHandle' data-id='5'>其他</classes>
+</view>
+<view class="row-container">
+  <view class="content-wrapper">
+    <view wx:if="{{refresh}}" class="tips">
+      <image class='tipsimage' src="../../../images/loading2.gif" mode="aspectFill" />
+      <text class='tipstext'>玩命加载中...</text>
+    </view>
+    <view wx:if='{{!hidden}}' class='errs'>未获取到数据</view>
+    <block wx:for="{{piclist}}" wx:for-item="at" wx:key="id">
+      <!-- 使用模板，传入当前循环对象item -->
+      <template is="classItem" data="{{...at,...{imgurl: imgbaseurl+at.filename} }}" />
+    </block>
+    <view class="tips">
+      <view wx:if="{{hasMore}}">
+        <image class='tipsimage' src="../../../images/loading2.gif" mode="aspectFill" />
+        <text class='tipstext'>玩命加载中...</text>
+      </view>
+      <view wx:if="{{!hasMore && !refresh && none}}">
+        <text class='tipstext'>没有更多内容了</text>
+      </view>
+    </view>
+  </view>
+</view>

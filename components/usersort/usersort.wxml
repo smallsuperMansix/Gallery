@@ -1,0 +1,8 @@
+<view class="wx-cells">
+    <navigator class="wx-cell" open-type='navigate' url='{{forward}}'>
+      <image class="wx-cell-icon" src="/components/usersort/ico/{{img}}.png" />
+      <text class="wx-cell-text" style="font-size:{{size}}rpx;">{{name}}</text>
+      <view wx:if="{{msgs}}" class="badge">{{msgs}}</view>
+      <image class="wx-cell-arrow" src="/components/usersort/ico/right-gray.png" />
+    </navigator>
+  </view>

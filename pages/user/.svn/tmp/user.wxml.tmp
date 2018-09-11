@@ -1,0 +1,22 @@
+<!-- 导入模板 -->
+<import src="../public/pagestate/pagestate.wxml" />
+<template is="pagestate" data="{{...pageing}}" />
+<!--pages/user/user.wxml-->
+<view class='baseview'>
+  <view class="bodyview" bindtap='showuseravatar'>
+    <image src='{{imgurl}}' class='user-avatar'></image>
+    <view class='user-info'>
+      <text wx:if="{{hasUserInfo}}" class='user-info-text'>{{uinfo}}</text>
+      <button wx:if="{{!hasUserInfo && canIUse}}" class='u-button' open-type='getUserInfo' bindgetuserinfo="getUserInfo">{{uinfo}}</button>
+    </view>
+    <image class="view-arrow" src="/components/usersort/ico/right-gray.png" />
+  </view>
+</view>
+<view>
+  <usersort forward='collect/collect' img='shc' name='收藏' />
+  <usersort wx:if="{{isChecker=='Y'}}" forward='review/review' img='sh' name='审核' msgs="{{reviews}}"/>
+  <usersort forward='uploading/uploading' img='sc' name='上传' />
+  <usersort forward='inform/inform' img='tz' name='通知' msgs="{{msgs}}"/>
+  <usersort forward='advise/advise' img='jy' name='建议' />
+  <usersort forward='about/about' img='gy' name='关于' />
+</view>

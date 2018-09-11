@@ -1,0 +1,33 @@
+<!-- 导入模板 -->
+<import src="../../public/uploadItem/uploadItem.wxml" />
+<import src="../../public/pagestate/pagestate.wxml" />
+<template is="pagestate" data="{{...pageing}}" />
+
+<!--pages/user/uploading/uploading.wxml-->
+<view class='baseView' bindtap='newUpload'>
+  <image src='upload.png' class='upload'></image>
+</view>
+<view class='with_arrow'></view>
+<view class='bodyView'>
+  <text class='text'>待审核</text>
+  <view class='row-container'>
+    <view class='content-wrapper'>
+      <block wx:for="{{img_noPassArr}}" wx:for-item="at" wx:key="id">
+        <!-- 使用模板，传入当前循环对象item -->
+        <template is="uploadItem" data="{{...at,...{imgurl: imgbaseurl+'?openid='+at.openid+'&filename='+at.filename,memo: '审核中'} }}" />
+      </block>
+    </view>
+  </view>
+</view>
+<view class='with_arrow'></view>
+<view class='bodyView'>
+  <text class='text'>已审核</text>
+  <view class='row-container'>
+    <view class='content-wrapper'>
+      <block wx:for="{{img_passArr}}" wx:for-item="at" wx:key="id">
+        <!-- 使用模板，传入当前循环对象item -->
+        <template is="uploadItem" data="{{...at,...{imgurl: imgbaseurl+'?openid='+at.openid+'&filename='+at.filename} }}" />
+      </block>
+    </view>
+  </view>
+</view>

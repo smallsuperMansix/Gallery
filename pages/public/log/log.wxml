@@ -1,0 +1,10 @@
+<template name="log">
+  <!-- List Item begin -->
+  <view class="content-list">
+    <view class='item'>
+      <image class='li'></image>
+      <text class='info'>{{verno}}: {{detail}}</text>
+    </view>
+  </view>
+  <!-- List Item end -->
+</template>

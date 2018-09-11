@@ -1,0 +1,16 @@
+<template name="uploadItem">
+  <!-- List Item begin -->
+  <view class="content-list">
+    <navigator class="item" open-type='navigate' url='' data-url='{{imgurl}}' bindtap='previewImg'>
+      <view class="top">
+        <image class="cover-img" src="{{imgurl}}" mode="aspectFill"/>
+      </view>
+      <view wx:if="{{memo}}" class="info">
+        <view class="title">
+          {{memo}}
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <!-- List Item end -->
+</template>

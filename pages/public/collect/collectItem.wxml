@@ -1,0 +1,12 @@
+<template name="collectItem">
+  <!-- List Item begin -->
+  <view class="content-list">
+    <navigator class="item" open-type='navigate' url=''>
+      <view class="top">
+        <image class="cover-img" src="{{imgurl}}" mode="aspectFill" data-url='{{imgurl}}' bindtap='previewImg'/>
+        <image class="del-img" src="/images/ico/del.png" data-filename='{{filename}}' mode="aspectFill" bindtap='delcollect'/>
+      </view>
+    </navigator>
+  </view>
+  <!-- List Item end -->
+</template>

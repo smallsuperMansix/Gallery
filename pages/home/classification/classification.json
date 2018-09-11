@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "类别",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "classes": "/components/classes/classes"
+  }
+}

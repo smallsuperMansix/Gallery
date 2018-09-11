@@ -1,0 +1,23 @@
+<!--pages/dynamic/dynamic.wxml-->
+<import src="../public/dynamicItem/dynamicItem.wxml" />
+<view wx:if="{{refresh}}" class="tips">
+  <image class='tipsimage' src="../../images/loading2.gif" mode="aspectFill" />
+  <text class='tipstext'>玩命加载中...</text>
+</view>
+<view wx:if='{{!hidden}}' class='errs'>未获取到数据</view>
+<scroll-view class="page_list" style='height: {{dynamicArr?dynamicArr.length:5}}*350rpx;' scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refreshData">
+  <view wx:for='{{dynamicArr}}' wx:for-item='at' wx:key="id">
+    <view class='baseview'>
+      <template is="dynamicItem" data="{{...at,...{imgurl: imgbaseurl+'?filename='+at.filename} }}" />
+    </view>
+  </view>
+  <view class="tips">
+    <view wx:if="{{hasMore}}">
+      <image class='tipsimage' src="../../images/loading2.gif" mode="aspectFill" />
+      <text class='tipstext'>玩命加载中...</text>
+    </view>
+    <view wx:if="{{!hasMore && none}}">
+      <text class='tipstext'>没有更多内容了</text>
+    </view>
+  </view>
+</scroll-view>

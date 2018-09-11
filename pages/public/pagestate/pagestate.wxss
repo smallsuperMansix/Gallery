@@ -1,0 +1,33 @@
+/* pages/public/pagestate/pagestate.wxss */
+.page-state-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page-state-center .retrybtn{
+  width: 80rpx;
+  height: 50rpx;
+  padding: 0rpx;
+  font-size: 25rpx;
+  align-items: center;
+}
+
+.page-state-container {
+  animation: fadein 2s 1 ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+.page-state-loading{
+  width: 20%;
+  height: 20%;
+}
+
+.page-state-container~view {
+  display: none;
+}

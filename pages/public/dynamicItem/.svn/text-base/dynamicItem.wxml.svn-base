@@ -1,0 +1,18 @@
+<template name="dynamicItem">
+  <view class='dynamicItem-baseView'>
+    <view class='dynamicItem-left'>
+      <image src='{{avatarUrl}}' class='head' mode='aspectFit'/>
+    </view>
+    <view class='dynamicItem-right'>
+      <view class='dynamicItem-righthead'>
+        <text class='name'>{{nickName}}</text><image src="{{gender==2?'/images/ico/girl.png':(gender==1?'/images/ico/boy.png':'/images/ico/neuter.png')}}" class='gender' mode='scaleToFill'/>
+      </view>
+      <view class='dynamicItem-rightbody'>
+        <image src='{{imgurl}}' class='body' mode='aspectFill' data-url='{{imgurl}}' bindtap='previewImg'/>
+      </view>
+      <view class='dynamicItem-rightfoot'>
+        <text class='mark'>{{cdate}}</text><image src='/images/ico/icon-see.png' class='foot' mode='scaleToFill'/><text class='footText'>{{sups}}</text>
+      </view>
+    </view>
+  </view>
+</template>

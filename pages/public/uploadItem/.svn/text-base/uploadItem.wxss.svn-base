@@ -1,0 +1,67 @@
+.row-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12rpx;
+    box-sizing: border-box;
+}
+.row-container .content-wrapper {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 0rpx;
+    box-sizing: border-box;  
+}
+.content-list {
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    padding: 0 6rpx 24rpx;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;  
+}
+.content-list .item .top {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 0;
+    padding-bottom: 63%;
+    box-sizing: border-box;  
+}
+.content-list .info {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 5rpx;
+    box-sizing: border-box;  
+}
+.content-list .item .cover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    background-color: rgba(36, 33, 33, 0.233);
+}
+.content-list .info .title {
+    width: 100%;
+    max-height: 50rpx;
+    overflow: hidden;
+    color: rgb(129, 126, 120);
+    font-size: 35rpx;
+    box-sizing: border-box;  
+    margin-bottom: 4rpx;
+    text-align: center;
+}

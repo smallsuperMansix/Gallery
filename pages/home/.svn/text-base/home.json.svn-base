@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "mainsort": "/components/mainsort/mainsort"
+  }
+}

@@ -1,0 +1,12 @@
+<!--pages/user/review/review.wxml-->
+<view class='content-all'>
+  <view class='todo-pass-img'>
+    <image class='current-img' mode='aspectFit' src='{{imgUrl}}' lazy-load='true'></image>
+  </view>
+  <!-- <button class='pass-img-btn' type='primary'>通过</button>
+  <button class='unpass-img-btn' type='warn' >不通过</button> -->
+  <view class='btn-area'>
+    <image  mode='aspectFit' class='pass-btn' data-ispass='Y' src='./pass.png' bindtap="passImg"></image>
+    <image  mode='aspectFit' class='pass-btn' data-ispass='U' src='./unpass.png' bindtap="passImg"></image>
+  </view>
+</view>

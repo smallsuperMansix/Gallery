@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/main/main",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/dynamic/dynamic",
+    "pages/user/collect/collect",
+    "pages/user/uploading/uploading",
+    "pages/user/inform/inform",
+    "pages/user/advise/advise",
+    "pages/user/about/about",
+    "pages/home/classification/classification",
+    "pages/user/review/review"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5cadff",
+    "navigationBarTitleText": "有图吧",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#5cadff",
+    "backgroundColor": "#f7f7f8",
+    "color": "#1c2438",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/ico/main.png",
+        "selectedIconPath": "images/ico/main-d.png"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "text": "动态",
+        "iconPath": "images/ico/dynamic.png",
+        "selectedIconPath": "images/ico/dynamic-d.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "images/ico/user.png",
+        "selectedIconPath": "images/ico/user-d.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+<template name="mainItem">
+  <!-- List Item begin -->
+  <view class="content-list">
+    <view class="item">
+      <view class="top">
+        <image class="cover-img" src="{{itemurl}}" mode="aspectFill"/>
+      </view>
+    </view>
+  </view>
+  <!-- List Item end -->
+</template>

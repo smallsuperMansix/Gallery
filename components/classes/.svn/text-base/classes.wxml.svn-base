@@ -1,0 +1,2 @@
+<!--components/classes/classes.wxml-->
+<view class="i-class" style="color: {{color}};font-size: {{size}}rpx;{{ischoose=='Y'?'background-color: #fff;':''}}"><slot></slot></view>

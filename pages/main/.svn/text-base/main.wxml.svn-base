@@ -1,0 +1,23 @@
+<!--pages/main/main.wxml-->
+<import src="../public/mainItem/mainItem.wxml"/>
+<swiper autoplay='true' interval='1500' duration='300' class='swp' indicator-dots='true'>
+  <block wx:for="{{recList}}" wx:for-item="at" wx:key="id">
+    <swiper-item>
+      <image src='{{imgUrl+at.filename}}' class='img' mode='scaleToFill' />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="row-container">
+  <navigator class="header" url=''>
+    <view class="right">
+      <text>查看更多</text>
+      <view class=""></view>
+    </view>
+  </navigator>
+  <view class="content-wrapper">
+    <block wx:for="{{hotList}}" wx:for-item="at" wx:key="id">
+      <!-- 使用模板，传入当前循环对象item -->
+      <template is="mainItem" data="{{...at,...{itemurl: imgUrl+at.filename} }}" />
+    </block>
+  </view>
+</view>
